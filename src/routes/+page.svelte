@@ -1,40 +1,84 @@
-<script>
+<script lang="ts">
     import Contentblock from "$lib/components/contentblock.svelte";
+    import SignupForm from "$lib/components/signupForm.svelte";
 </script>
 
-<!-- <div class="bubbles">
-            <p class="narrow">
-                +31 6 44 98 45 71
-            </p>
+<!-- <div class="polalinks">
+    <Polaroidlink src={bespokeImage} href="" title="Bespoke tours"></Polaroidlink>
+    <Polaroidlink src={bespokeImage} href="" title="Bespoke tours"></Polaroidlink>
+    <Polaroidlink src={bespokeImage} href="" title="Bespoke tours"></Polaroidlink>
+    <Polaroidlink src={bespokeImage} href="" title="Bespoke tours"></Polaroidlink>
+    <Polaroidlink src={bespokeImage} href="" title="Bespoke tours"></Polaroidlink>
+    <Polaroidlink src={bespokeImage} href="" title="Bespoke tours"></Polaroidlink>
+    <Polaroidlink src={bespokeImage} href="" title="Bespoke tours"></Polaroidlink>
+    <Polaroidlink src={bespokeImage} href="" title="Bespoke tours"></Polaroidlink>
 
-            <p class="narrow-flipped">
-                book@shepherdtours.nl
-            </p>
-            <p>
-                More website content coming soon!
-            </p>
-        </div> -->
-<Contentblock title="Private Tour Offerings">
-    <ul>
-        <ul>Best of The Hague Tour</ul>
-        <ul>Best of Food Tour</ul>
-        <ul>Newcomers Tour</ul>
-        <ul>Politics of The Hague Tour</ul>
-        <ul>Secrets of Laakkwartier Tour</ul>
-        <ul>Dutch Royal Family Tour</ul>
-        <ul>Beer and Spirits Tasting Tour</ul>
-    </ul>
-    We also offer Custom Bespoke Tours!
-</Contentblock>
+</div> -->
+<div class="row">
+    <Contentblock>"You absolutely made our trip! The girls said that saying goodbye to you was like saying goodbye to family"</Contentblock>
+    <Contentblock>“Julia went above and beyond to customise our itinerary and organize meetings for us. So glad we found such a passionate guide!”</Contentblock>
+</div>
+
+<div class="row">
+    <div class="contact-block">
+    <p>
+        book your tour now
+    </p>
+        <Contentblock
+            ><a href="tel:+31644984571">+31 6 44 98 45 71</a>
+        </Contentblock>
+        <Contentblock
+            ><a href="mailto:book@shepherdtours.nl">book@shepherdtours.nl</a
+            ></Contentblock
+        >
+    </div>
+    <div class="form">
+    <SignupForm ></SignupForm>
+    </div>
+</div>
 
 <style>
-    ul {
-        padding: 0px;
-        line-height: 25pt;
-        font-size: 18px;
-        margin-top: 20px;
+    .polalinks{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 100%;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: inherit;
+    }
+
+    .contact-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+        flex: 1 1 320px;
+        min-width: 280px;
+    }
+    .contact-block p {
+        font-size: 72px;
+        font-family: "playfair display variable";
+        font-weight: bold;
         text-transform: uppercase;
-        letter-spacing: 1px;
+        margin: 0px;
+    }
+
+    .form{
+        flex: 2 1 320px;
+        min-width: 280px;
+    }
+
+
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
     }
     /*
 

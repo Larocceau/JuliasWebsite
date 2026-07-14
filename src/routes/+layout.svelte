@@ -1,5 +1,7 @@
 <script lang="ts">
 	import favicon from "$lib/assets/favicon.svg";
+    import Navbar from "$lib/components/navbar.svelte";
+
 
 	let { children } = $props();
 	let year = `${(new Date().getFullYear())}`;
@@ -20,6 +22,7 @@
 		Private tours showing the best of The Hague and all the secrets in
 		between
 	</section>
+	<!-- <Navbar/> -->
 </header>
 <main>
 	{@render children()}
@@ -54,6 +57,7 @@ header {
     gap: 40px;
     flex-direction: column;
     margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 header img {
@@ -79,12 +83,17 @@ header img {
     overflow: hidden;
 }
 
+ @media(max-width: 600px) {.logo-text {
+    font-size: 60px
+
+}}
+
 main {
     display: flex;
-    flex-flow: columns wrap;
+    flex-direction: column;
     align-items: center;
-
-
+	padding: 10px;
+    gap: 25px
 }
 
 
