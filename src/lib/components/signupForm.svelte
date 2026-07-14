@@ -18,7 +18,7 @@
             `mailto:book@shepherdtours.nl?subject=New Tour Request&body=${content}`,
         );
 
-        window.open(url, "_current");
+        window.open(url, "_self");
         event.currentTarget.reset();
     };
 </script>
