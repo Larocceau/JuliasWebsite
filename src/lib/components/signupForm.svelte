@@ -1,30 +1,34 @@
 <script lang="ts">
-   const doSubmit = (event: SubmitEvent & { currentTarget: EventTarget & HTMLFormElement; }) => {
+    const doSubmit = (
+        event: SubmitEvent & { currentTarget: EventTarget & HTMLFormElement },
+    ) => {
+        const data = new FormData(event.currentTarget);
 
-        const data = new FormData(event.currentTarget)
-
-        const content =
-        `
-            Hi Julia,
+        const content = `Hi Julia,
 
             I'm interested in taking one of your tours. Here are the details:
 
-            ${data.entries().map(([key, value]) => `${key}: ${value}`).reduce((acc, value) => acc + "\n" + value  )}
+            ${data
+                .entries()
+                .map(([key, value]) => `${key.replace("-", " ")}: ${value}`)
+                .reduce((acc, value) => acc + "\n" + value)}
         
-        `
-        const url = encodeURI(`mailto:book@shepherdtours.nl?subject=tour&body=${content}`) 
+        `;
+        const url = encodeURI(
+            `mailto:book@shepherdtours.nl?subject=New Tour Request&body=${content}`,
+        );
 
-        window.open(url, "_current")
-        event.currentTarget.reset()
+        window.open(url, "_current");
+        event.currentTarget.reset();
     };
 </script>
 
 <form onsubmit={doSubmit}>
     <label for="name"> What is your name? </label>
-    <input name="name" type="text" required/>
+    <input name="name" type="text" required />
     <label for="type">Which tour would you like to book?</label>
     <select name="type" required>
-        <option>Pick a tour...</option>
+        <option disabled selected>Pick a tour...</option>
         <option value="best of">Best of The Hague Tour</option>
         <option value="food">Best of Food Tour</option>
         <option value="newcomers">Newcomers Tour</option>
@@ -35,10 +39,11 @@
         <option value="bespoke">Bespoke tour</option>
     </select>
 
-    <label for="when" >
+    <label for="when">
         When would you like to have this tour?
-        <p class="tip">You can provide multiple
-        options; please also include time of day</p>
+        <p class="tip">
+            You can provide multiple options; please also include time of day
+        </p>
     </label>
     <textarea name="when" required></textarea>
     <label for="group-size"> How many people will be joining you? </label>
@@ -46,9 +51,9 @@
     <label for="age-range"> What is the age range of your group? </label>
     <input name="age-range" type="text" required />
     <label for="dietary"> Any food allergies or preferences? </label>
-    <input name="dietary" type="text" required/> 
+    <input name="dietary" type="text" required />
     <label for="anything-else"> Anything else you'd like to mention? </label>
-    <textarea name="anyting-else" ></textarea>
+    <textarea name="anyting-else"></textarea>
     <button>Submit</button>
 </form>
 
@@ -70,8 +75,6 @@
         margin: 0px;
         font-size: small;
     }
-
-
 
     option,
     input,
