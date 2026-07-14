@@ -4,9 +4,9 @@
     ) => {
         const data = new FormData(event.currentTarget);
 
-        const content = `Hi Julia,
+        const content = `Dear Shepherd Tours team,
 
-            I'm interested in taking one of your tours. Here are the details:
+            I'm interested in booking one of your tours. Here are the details:
 
             ${data
                 .entries()
