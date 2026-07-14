@@ -1,22 +1,24 @@
 <script lang="ts">
-	import favicon from "$lib/assets/favicon.svg";
     import Navbar from "$lib/components/navbar.svelte";
+    import dogLogo from "$lib/assets/dog_logo.png";
+    import dogLogoSecondary from "$lib/assets/dog_logo_secondary.png";
 
-
-	let { children } = $props();
-	let year = `${(new Date().getFullYear())}`;
+    let { children } = $props();
+    let year = `${(new Date().getFullYear())}`;
 
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
-	<link rel="stylesheet" href="/fonts.css" />
+    <link rel="icon" href={dogLogo} />
+    <link rel="icon" type="image/png" sizes="32x32" href={dogLogo} />
+    <link rel="apple-touch-icon" sizes="180x180" href={dogLogo} />
+    <link rel="stylesheet" href="/fonts.css" />
 </svelte:head>
 
 <header>
 	<div class="header-content">
-		<h1 class="logo-text">Shepherd Tours</h1>
-		<img src="dog_logo.png" alt="Shepherd logo" />
+        <h1 class="logo-text">Shepherd Tours</h1>
+        <img src={dogLogo} alt="Shepherd logo" />
 	</div>
 	<section class="banner">
 		Private tours showing the best of The Hague and all the secrets in
@@ -30,10 +32,7 @@
 
 <footer>
 	<p class="logo-text">
-		Shepherd tours <img
-			alt="Shepherd Tour's logo"
-			src="dog_logo_secondary.png"
-		/>
+        Shepherd tours <img alt="Shepherd Tour's logo" src={dogLogoSecondary} />
 	</p>
 	<section>
 		<h3>Contact us</h3>

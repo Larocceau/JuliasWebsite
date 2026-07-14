@@ -1,50 +1,50 @@
+:root {
+    --color-primary: #71181e;
+    --color-secondary: #fccf65;
+    --color-detail: #5e8c7f;
+
+}
+
+/* playfair-display-latin-wght-normal */
+@font-face {
+    font-family: 'Playfair Display Variable';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400 900;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/playfair-display:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 
-	:root {
-	    --color-primary: #71181e;
-	    --color-secondary: #fccf65;
 
-	}
+/* montserrat-latin-wght-normal */
+@font-face {
+    font-family: 'Montserrat Variable';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100 900;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/montserrat:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
-    	/* playfair-display-latin-wght-normal */
-	@font-face {
-	    font-family: 'Playfair Display Variable';
-	    font-style: normal;
-	    font-display: swap;
-	    font-weight: 400 900;
-	    src: url(https://cdn.jsdelivr.net/fontsource/fonts/playfair-display:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
-	    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-	}
+html,
+body {
+    height: 100%;
+    margin: 0px;
+    width: 100%;
 
+    background-color: var(--color-secondary);
 
+}
 
-	/* montserrat-latin-wght-normal */
-	@font-face {
-	    font-family: 'Montserrat Variable';
-	    font-style: normal;
-	    font-display: swap;
-	    font-weight: 100 900;
-	    src: url(https://cdn.jsdelivr.net/fontsource/fonts/montserrat:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
-	    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-	}
+body {
+    color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 
-	html,
-	body {
-	    height: 100%;
-	    margin: 0px;
-	    background-color: var(--color-secondary);
-
-	}
-
-	body {
-	    color: var(--color-primary);
-	    display: flex;
-	    flex-direction: column;
-	    align-items: center;
-	    justify-content: space-between;
-
-	    width: 100%;
-	    min-height: 100%;
-	    box-sizing: border-box;
-	    font-family: "Montserrat Variable", sans-serif;
-	}
+    min-height: 100%;
+    box-sizing: border-box;
+    font-family: "Montserrat Variable", sans-serif;
+}
