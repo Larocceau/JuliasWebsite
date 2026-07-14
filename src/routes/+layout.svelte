@@ -9,9 +9,6 @@
 </script>
 
 <svelte:head>
-    <link rel="icon" href={dogLogo} />
-    <link rel="icon" type="image/png" sizes="32x32" href={dogLogo} />
-    <link rel="apple-touch-icon" sizes="180x180" href={dogLogo} />
     <link rel="stylesheet" href="/fonts.css" />
 </svelte:head>
 
