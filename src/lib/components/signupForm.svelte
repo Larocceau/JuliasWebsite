@@ -6,12 +6,12 @@
 
         const content = `Dear Shepherd Tours team,
 
-            I'm interested in booking one of your tours. Here are the details:
+        I'm interested in booking one of your tours. Here are the details:
 
-            ${data
-                .entries()
-                .map(([key, value]) => `${key.replace("-", " ")}: ${value}`)
-                .reduce((acc, value) => acc + "\n" + value)}
+        ${data
+            .entries()
+            .map(([key, value]) => `${key.replace("-", " ")}: ${value}`)
+            .reduce((acc, value) => acc + "\n" + value)}
         
         `;
         const url = encodeURI(
