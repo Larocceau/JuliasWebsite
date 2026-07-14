@@ -53,7 +53,7 @@
     <label for="dietary"> Any food allergies or preferences? </label>
     <input name="dietary" type="text" required />
     <label for="anything-else"> Anything else you'd like to mention? </label>
-    <textarea name="anyting-else"></textarea>
+    <textarea name="anything-else"></textarea>
     <button>Submit</button>
 </form>
 
