@@ -18,7 +18,7 @@
         <img src={dogLogo} alt="Shepherd logo" />
 	</div>
 	<section class="banner">
-		Private tours showing the best of The Hague and all the secrets in
+		Private tours showing the highlights of The Hague and all the secrets in
 		between
 	</section>
 	<!-- <Navbar/> -->
