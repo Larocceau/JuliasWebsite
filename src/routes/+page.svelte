@@ -1,6 +1,15 @@
 <script lang="ts">
     import Contentblock from "$lib/components/contentblock.svelte";
+    import Polaroidlink from "$lib/components/polaroidlink.svelte";
     import SignupForm from "$lib/components/signupForm.svelte";
+    import bespokeImage from "$lib/assets/polaroids/bespoke tour.jpg?enhanced";
+    import bestOfImage from "$lib/assets/polaroids/best of The Hague.jpg?enhanced";
+    import foodImage from "$lib/assets/polaroids/food tour.jpg?enhanced";
+    import newcomersImage from "$lib/assets/polaroids/newcomers tour.jpg?enhanced";
+    import beerAndSpiritsImage from "$lib/assets/polaroids/drink tour.jpg?enhanced";
+    import politicsImage from "$lib/assets/polaroids/politics tour.jpg?enhanced";
+    import laakImage from "$lib/assets/polaroids/laak tour.jpg?enhanced"
+    import contactImage from "$lib/assets/polaroids/contact us.jpg?enhanced"
 </script>
 
 <svelte:head
@@ -11,26 +20,37 @@
     <title>Shepherd's tours</title>
 </svelte:head>
 
-<!-- <div class="polalinks">
-    <Polaroidlink src={bespokeImage} href="" title="Bespoke tours"></Polaroidlink>
-    <Polaroidlink src={bespokeImage} href="" title="Bespoke tours"></Polaroidlink>
-    <Polaroidlink src={bespokeImage} href="" title="Bespoke tours"></Polaroidlink>
-    <Polaroidlink src={bespokeImage} href="" title="Bespoke tours"></Polaroidlink>
-    <Polaroidlink src={bespokeImage} href="" title="Bespoke tours"></Polaroidlink>
-    <Polaroidlink src={bespokeImage} href="" title="Bespoke tours"></Polaroidlink>
-    <Polaroidlink src={bespokeImage} href="" title="Bespoke tours"></Polaroidlink>
-    <Polaroidlink src={bespokeImage} href="" title="Bespoke tours"></Polaroidlink>
-
-</div> -->
-<div class="row">
-    <Contentblock
-        >"You absolutely made our trip! The girls said that saying goodbye to
-        you was like saying goodbye to family"</Contentblock
-    >
+<div class="polalinks">
+    <Polaroidlink src={bestOfImage} title="Best of The Hague Private Tour" rotation={4}
+    ></Polaroidlink>
+    <Polaroidlink src={foodImage} title="Food of The Hague Private Food Tour" rotation={2}
+    ></Polaroidlink>
+    <Polaroidlink src={newcomersImage} title="Newcomers Private Tour" rotation={-2}
+    ></Polaroidlink>
+    <Polaroidlink src={beerAndSpiritsImage} title="Beer and Spirits Private Tasting Tour" rotation={6}
+    ></Polaroidlink>
+    <Polaroidlink src={politicsImage} title="Politics of The Hague Private Tour" rotation={-1}
+    ></Polaroidlink>
+    <Polaroidlink src={laakImage} title="Laak Uncovered Private Tour" rotation={-3}
+    ></Polaroidlink>
+    <Polaroidlink src={bespokeImage} title="Bespoke Tours" rotation={-2}
+    ></Polaroidlink>
+    <Polaroidlink src={contactImage} title="Contact Us" href="#contact" rotation={5}
+    ></Polaroidlink>
+</div>
+<div class="testemonials">
+    <div>
+        <Contentblock
+            >"You absolutely made our trip! The girls said that saying goodbye
+            to you was like saying goodbye to family"</Contentblock
+        >
+    </div>
+    <div>
     <Contentblock
         >“Julia went above and beyond to customise our itinerary and organize
         meetings for us. So glad we found such a passionate guide!”</Contentblock
     >
+    </div>
 </div>
 
 <div class="row">
@@ -44,7 +64,7 @@
             ></Contentblock
         >
     </div>
-    <div class="form">
+    <div class="form" id="contact">
         <SignupForm></SignupForm>
     </div>
 </div>
@@ -54,6 +74,8 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         width: 100%;
+        gap: 10px;
+        margin: 10px;
     }
 
     a {
@@ -89,6 +111,23 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 10px;
+    }
+    .testemonials  {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px
+
+    }
+
+
+        @media (max-width: 800px) {
+        .polalinks {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .testemonials {
+            grid-template-columns: 1fr;
+        }
     }
     /*
 

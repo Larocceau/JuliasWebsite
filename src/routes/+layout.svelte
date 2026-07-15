@@ -89,7 +89,8 @@ main {
     flex-direction: column;
     align-items: center;
 	padding: 10px;
-    gap: 25px
+    gap: 25px;
+    max-width: 1250px;
 }
 
 
