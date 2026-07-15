@@ -81,21 +81,22 @@
     select,
     textarea {
         border-style: solid;
-        border-radius: 5px;
         border-color: var(--color-detail);
-        background-color: white;
         font: inherit;
-        padding: 2px;
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 8px;
+        margin-bottom: 8px;
     }
 
     button {
         background-color: var(--color-secondary);
+        color: var(--color-detail);
         border: none;
         border-radius: 10px;
-        padding: 5px;
-        font-weight: bold;
+        padding: 8px;
         font-size: larger;
-        color: var(--color-detail);
+        font-weight: 700;
     }
 
     button:hover {
