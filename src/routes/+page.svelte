@@ -1,5 +1,4 @@
 <script lang="ts">
-    import Contentblock from "$lib/components/contentblock.svelte";
     import Polaroidlink from "$lib/components/polaroidlink.svelte";
     import SignupForm from "$lib/components/signupForm.svelte";
     import bespokeImage from "$lib/assets/polaroids/bespoke tour.jpg?enhanced";
@@ -8,8 +7,10 @@
     import newcomersImage from "$lib/assets/polaroids/newcomers tour.jpg?enhanced";
     import beerAndSpiritsImage from "$lib/assets/polaroids/drink tour.jpg?enhanced";
     import politicsImage from "$lib/assets/polaroids/politics tour.jpg?enhanced";
-    import laakImage from "$lib/assets/polaroids/laak tour.jpg?enhanced"
-    import contactImage from "$lib/assets/polaroids/contact us.jpg?enhanced"
+    import laakImage from "$lib/assets/polaroids/laak tour.jpg?enhanced";
+    import contactImage from "$lib/assets/polaroids/contact us.jpg?enhanced";
+    import Bookingdetails from "$lib/components/bookingdetails.svelte";
+    import Widget from "$lib/components/widget.svelte";
 </script>
 
 <svelte:head
@@ -21,53 +22,70 @@
 </svelte:head>
 
 <div class="polalinks">
-    <Polaroidlink src={bestOfImage} title="Best of The Hague Private Tour" rotation={4}
+    <Polaroidlink
+        src={bestOfImage}
+        title="Best of The Hague Private Tour"
+        rotation={4}
+        href="/tours/best_of"
     ></Polaroidlink>
-    <Polaroidlink src={foodImage} title="Food of The Hague Private Food Tour" rotation={2}
+    <Polaroidlink
+        src={foodImage}
+        title="Food of The Hague Private Food Tour"
+        rotation={2}
+        href="/tours"
     ></Polaroidlink>
-    <Polaroidlink src={newcomersImage} title="Newcomers Private Tour" rotation={-2}
+    <Polaroidlink
+        src={newcomersImage}
+        title="Newcomers Private Tour"
+        rotation={-2}
+        href="/tours"
     ></Polaroidlink>
-    <Polaroidlink src={beerAndSpiritsImage} title="Beer and Spirits Private Tasting Tour" rotation={6}
+    <Polaroidlink
+        src={beerAndSpiritsImage}
+        title="Beer and Spirits Private Tasting Tour"
+        rotation={6}
+        href="/tours"
     ></Polaroidlink>
-    <Polaroidlink src={politicsImage} title="Politics of The Hague Private Tour" rotation={-1}
+    <Polaroidlink
+        src={politicsImage}
+        title="Politics of The Hague Private Tour"
+        rotation={-1}
+        href="/tours"
     ></Polaroidlink>
-    <Polaroidlink src={laakImage} title="Laak Uncovered Private Tour" rotation={-3}
+    <Polaroidlink
+        src={laakImage}
+        title="Laak Uncovered Private Tour"
+        rotation={-3}
+        href="/tours"
     ></Polaroidlink>
-    <Polaroidlink src={bespokeImage} title="Bespoke Tours" rotation={-2}
+    <Polaroidlink
+        src={bespokeImage}
+        title="Bespoke Tours"
+        rotation={-2}
+        href="/tours"
     ></Polaroidlink>
-    <Polaroidlink src={contactImage} title="Contact Us" href="#contact" rotation={5}
+    <Polaroidlink
+        src={contactImage}
+        title="Contact Us"
+        href="#contact"
+        rotation={5}
     ></Polaroidlink>
 </div>
 <div class="testemonials">
     <div>
-        <Contentblock
+        <Widget
             >"You absolutely made our trip! The girls said that saying goodbye
-            to you was like saying goodbye to family"</Contentblock
+            to you was like saying goodbye to family"</Widget
         >
     </div>
     <div>
-    <Contentblock
-        >“Julia went above and beyond to customise our itinerary and organize
-        meetings for us. So glad we found such a passionate guide!”</Contentblock
-    >
-    </div>
-</div>
-
-<div class="row">
-    <div class="contact-block">
-        <p>book your tour now</p>
-        <Contentblock
-            ><a href="tel:+31644984571">+31 6 44 98 45 71</a>
-        </Contentblock>
-        <Contentblock
-            ><a href="mailto:book@shepherdtours.nl">book@shepherdtours.nl</a
-            ></Contentblock
+        <Widget
+            >“Julia went above and beyond to customise our itinerary and
+            organize meetings for us. So glad we found such a passionate guide!”</Widget
         >
     </div>
-    <div class="form" id="contact">
-        <SignupForm></SignupForm>
-    </div>
 </div>
+<Bookingdetails></Bookingdetails>
 
 <style>
     .polalinks {
@@ -78,49 +96,13 @@
         margin: 10px;
     }
 
-    a {
-        color: inherit;
-        text-decoration: inherit;
-    }
-
-    .contact-block {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        text-align: center;
-        gap: 5px;
-        flex: 1 1 320px;
-        min-width: 280px;
-    }
-    .contact-block p {
-        font-size: 72px;
-        font-family: "playfair display variable";
-        font-weight: bold;
-        text-transform: uppercase;
-        margin: 0px;
-    }
-
-    .form {
-        flex: 2 1 320px;
-        min-width: 280px;
-    }
-
-    .row {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-    .testemonials  {
+    .testemonials {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 5px
-
+        gap: 5px;
     }
 
-
-        @media (max-width: 800px) {
+    @media (max-width: 800px) {
         .polalinks {
             grid-template-columns: 1fr 1fr;
         }

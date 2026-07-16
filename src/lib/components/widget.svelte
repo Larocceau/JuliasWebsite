@@ -3,18 +3,12 @@
 
     let {
         children,
-        title,
     }: {
-        title?: string;
         children: Snippet;
-        class?: string;
     } = $props();
 </script>
 
-<section>
-    {#if title}
-        <h2>{title}</h2>
-    {/if}
+<section >
 
     {@render children()}
 </section>
@@ -23,8 +17,9 @@
     section {
         border-radius: 30px;
         padding: 20px;
-        background-color: var(--color-primary);
-        color: var(--color-secondary);
+        max-width: 800px;
+        background-color: var(--color-detail);
+        color: white;
     }
 
     h2 {

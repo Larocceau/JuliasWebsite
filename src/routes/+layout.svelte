@@ -9,7 +9,6 @@
 </script>
 
 <svelte:head>
-    <link rel="stylesheet" href="/fonts.css" />
 </svelte:head>
 
 <header>
@@ -21,7 +20,7 @@
 		Private tours showing the highlights of The Hague and all the secrets in
 		between
 	</section>
-	<!-- <Navbar/> -->
+	<Navbar/>
 </header>
 <main>
 	{@render children()}
