@@ -7,7 +7,7 @@
 </script>
 
 <Tourpage
-    title="More tours"
+    title="Discover Our Tours"
     images={[
         {
             picture: picture1,
@@ -27,31 +27,21 @@
     <p>What can you expect on your tour?</p>
     <ul>
         <li>
-            3 hours of taking in the sights, with a well-deserved break in
-            themiddle.
+            3 hours of taking in the sights, with a well-deserved break in the
+            middle.
         </li>
         <li>Maximum 10 people per guide.</li>
         <li>
-            Knowledgeable private local guide with an international
-            backgroundwho speaks both Dutch and English.
+            Knowledgeable private local guide with an international background
+            who speaks both Dutch and English.
         </li>
         <li>
             Pick up and drop off from location on foot or by public transport.
         </li>
         <li>Follow up thank you email with a picture for memories!</li>
     </ul>
-
     <p>
-        We have the following tours available. More details about them on here
-        soon, for now, just reach out for more information.
+        More information on bespoke tours coming soon. Feel free to reach out
+        about booking one.
     </p>
-    <ul>
-        <li>Best of The Hague Private Tour</li>
-        <li>Food of The Hague Private Food Tour</li>
-        <li>Newcomers Private Tour</li>
-        <li>Beer and Spirits Private Tasting Tour</li>
-        <li>Politics of The Hague Private Tour</li>
-        <li>Laak Uncovered Private Tour</li>
-        <li>Bespoke tours</li>
-    </ul>
 </Tourpage>

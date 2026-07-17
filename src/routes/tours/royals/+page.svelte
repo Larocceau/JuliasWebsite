@@ -1,26 +1,26 @@
 <script>
     import Tourpage from "$lib/components/tourpage.svelte";
-    import picture1 from "$lib/assets/polaroids/politics/photo_1.png?enhanced";
-    import picture2 from "$lib/assets/polaroids/politics/photo_2.png?enhanced";
-    import picture3 from "$lib/assets/polaroids/politics/politics_3.png?enhanced";
+    import picture1 from "$lib/assets/polaroids/royals/photo_1.png?enhanced";
+    import picture2 from "$lib/assets/polaroids/royals/photo_2.png?enhanced";
+    import picture3 from "$lib/assets/polaroids/royals/photo_3.png?enhanced";
 </script>
 
 <Tourpage
     pretitle="Private Walking Tour"
-    title="Politics in The Hague"
+    title="Dutch Royal Family"
     price="€300 flat per hour + €10 per person"
     images={[
         {
             picture: picture1,
-            description: "Hoge Raad",
+            description: "Paleis Noordeinde",
         },
         {
             picture: picture2,
-            description: "World Forum",
+            description: "Paleistuin",
         },
         {
             picture: picture3,
-            description: "Peace Palace",
+            description: "Orkest Koninklijke Marechaussee",
         },
     ]}
 >
@@ -32,16 +32,14 @@
     <p><b>This tour is not available on Mondays. </b></p>
     <p>This tour includes:</p>
     <ul>
+        <li>Exterior views of three Palaces, the Royal Stables, and more</li>
         <li>
-            Exterior views of Europol, OPCW, Peace Palace, City Hall, and more
+            A break at a pub, cafe, or restaurant that is a supplier to the
+            royal family
         </li>
         <li>
-            A break at a pub, cafe, or restaurant - reservations and
-            recommendations made by us
-        </li>
-        <li>
-            A journey through the political history of The Hague, covering over
-            800 years of sights and stories
+            A journey through the Royal Family’s history of The Hague, covering
+            over 800 years of sights and stories
         </li>
         <li>The option to add tickets to museums of your choosing</li>
     </ul></Tourpage

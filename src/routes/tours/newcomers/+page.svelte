@@ -1,32 +1,31 @@
 <script>
     import Tourpage from "$lib/components/tourpage.svelte";
-    //TODO replace these
-    import picture1 from "$lib/assets/polaroids/best_of/best of The Hague 1.png?enhanced";
-    import picture2 from "$lib/assets/polaroids/best_of/best of the hague 2.png?enhanced";
-    import picture3 from "$lib/assets/polaroids/best_of/best of The Hague 3.png?enhanced";
+    import picture1 from "$lib/assets/polaroids/newcomers/nt_1.png?enhanced";
+    import picture2 from "$lib/assets/polaroids/newcomers/photo3.png?enhanced";
+    import picture3 from "$lib/assets/polaroids/newcomers/nt_3.png?enhanced";
 </script>
 
 <Tourpage
-    pretitle="Private walking tour"
+    pretitle="Private Walking Tour"
     title="Newcomers Tour"
-    price="300€ flat per hour + 20€ per person"
+    price="€300 flat per hour + €20 per person"
     images={[
         {
             picture: picture1,
-            description: "Peace Palace",
+            description: "Feel at Home",
         },
         {
             picture: picture2,
-            description: "Hofvijver",
+            description: "Make New Friends",
         },
         {
             picture: picture3,
-            description: "Dunne Bierkade",
+            description: "Familiar Shopping",
         },
     ]}
 >
     <p>
-        The cost for a this 3 hour tour is <b
+        The cost for a 3 hour tour is <b
             >€300 per tour, + €20 per person aged 3+.</b
         > This includes food and drink at the scheduled locations.
     </p>

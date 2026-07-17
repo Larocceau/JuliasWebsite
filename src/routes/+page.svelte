@@ -32,31 +32,31 @@
         src={foodImage}
         title="Food of The Hague Private Food Tour"
         rotation={2}
-        href="/tours"
+        href="/tours/food"
     ></Polaroidlink>
     <Polaroidlink
         src={newcomersImage}
         title="Newcomers Private Tour"
         rotation={-2}
-        href="/tours"
+        href="/tours/newcomers"
     ></Polaroidlink>
     <Polaroidlink
         src={beerAndSpiritsImage}
         title="Beer and Spirits Private Tasting Tour"
         rotation={6}
-        href="/tours"
+        href="/tours/drinks"
     ></Polaroidlink>
     <Polaroidlink
         src={politicsImage}
         title="Politics of The Hague Private Tour"
         rotation={-1}
-        href="/tours"
+        href="/tours/politics"
     ></Polaroidlink>
     <Polaroidlink
         src={laakImage}
         title="Laak Uncovered Private Tour"
         rotation={-3}
-        href="/tours"
+        href="/tours/laak"
     ></Polaroidlink>
     <Polaroidlink
         src={bespokeImage}
