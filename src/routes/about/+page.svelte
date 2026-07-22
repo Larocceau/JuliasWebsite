@@ -10,7 +10,7 @@
 </script>
 
 <div class="content-and-shizzle">
-    <div>
+    <div class="main-content">
         <Contentblock>
             <p>
                 My name is Julia Cottrell, and I founded Shepherd Tours because
@@ -44,6 +44,33 @@
                 walked into tour guiding, and never went back.
             </p>
         </Contentblock>
+        <Contentblock title="Sustainability">
+            <p>
+                In a world that continues to grow, sustainable values are
+                equally as important in big, established cities as in small
+                rural areas.
+            </p>
+            <p>
+                We prioritise using public transport, bikes, and of course, our
+                feet!
+            </p>
+            <p>
+                I also find it important to showcase the best of the independent
+                section of the city. All the groups we work with and showcase on
+                my tours are independent shop owners or business owners, often
+                immigrants, who prioritise the best of the best for their
+                clients.
+            </p>
+            <p>
+                I find it important to talk about the good and the bad about an
+                area on a tour - it’s important to give a full overview of the
+                topics at hand.
+            </p>
+            <p>
+                Finally, every time a tour is booked, a tree is planted through
+                treesforall.com
+            </p>
+        </Contentblock>
     </div>
 
     <div class="side-bar">
@@ -74,6 +101,12 @@
         gap: 20px;
         width: 100%;
         align-content: start;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 
     .side-bar {

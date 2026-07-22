@@ -20,10 +20,8 @@
         max-width: 800px;
         background-color: var(--color-detail);
         color: white;
+        text-align: center;
     }
 
-    h2 {
-        margin-top: 0px;
-        font-family: "Playfair Display Variable", cursive;
-    }
+
 </style>
