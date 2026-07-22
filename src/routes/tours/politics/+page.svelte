@@ -6,6 +6,7 @@
 </script>
 
 <Tourpage
+    preselection="Politics of The Hague Tour"
     pretitle="Private Walking Tour"
     title="Politics in The Hague"
     price="€300 flat per hour + €10 per person"

@@ -6,6 +6,7 @@
 </script>
 
 <Tourpage
+    preselection="Secrets of Laakkwartier Tour"
     pretitle="Private Walking Tour"
     title="Laakkwartier Uncovered"
     price="€300 flat per hour + €10 per person"

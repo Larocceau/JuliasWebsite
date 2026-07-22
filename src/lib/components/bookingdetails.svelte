@@ -1,8 +1,9 @@
 <script lang="ts">
+    import type { Tour } from "$lib/domain";
     import SignupForm from "./signupForm.svelte";
     import Widget from "./widget.svelte";
 
-    let {callForAction = "book your tour now"}: {callForAction?: string} = $props();
+    let {callForAction = "book your tour now", preselection}: {callForAction?: string, preselection?: Tour} = $props();
 
 </script>
 <div class="row">
@@ -17,7 +18,7 @@
         >
     </div>
     <div class="form" id="contact">
-        <SignupForm></SignupForm>
+        <SignupForm {preselection}></SignupForm>
     </div>
 </div>
 

@@ -6,6 +6,7 @@
 </script>
 
 <Tourpage
+    preselection="Newcomers Tour"
     pretitle="Private Walking Tour"
     title="Newcomers Tour"
     price="€300 flat per hour + €20 per person"

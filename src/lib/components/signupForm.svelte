@@ -1,16 +1,47 @@
 <script lang="ts">
+    import type { Tour } from "$lib/domain";
+    import { invertRecord } from "$lib/helpers";
+
+    let { preselection }: { preselection?: Tour } = $props();
+
+    let keyToTour: Record<string, Tour> = {
+        best: "Best of The Hague Tour",
+        food: "Best of Food Tour",
+        newcomers: "Newcomers Tour",
+        politics: "Politics of The Hague Tour",
+        laak: "Secrets of Laakkwartier Tour",
+        royal: "Dutch Royal Family Tour",
+        drink: "Beer and Spirits Tasting Tour",
+        bespoke: "Bespoke tour",
+    };
+
+    let tourToKey = invertRecord(keyToTour);
+
+    let rawSelectedTour = $state<string >("");
+
+    $effect(() => {
+        if (preselection) {
+            rawSelectedTour = tourToKey[preselection];
+        }
+    });
+
     const doSubmit = (
         event: SubmitEvent & { currentTarget: EventTarget & HTMLFormElement },
     ) => {
         const data = new FormData(event.currentTarget);
 
+        const tour = rawSelectedTour && keyToTour[rawSelectedTour];
+
         const content = `Dear Shepherd Tours team,
 
-        I'm interested in booking one of your tours. Here are the details:
+        I'm interested in booking a ${tour}. Here are the details:
 
         ${data
             .entries()
-            .map(([key, value]) => `${key.replace("-", " ")}: ${value}`)
+            .filter(([key, _]) => {
+                return key != "type";
+            })
+            .map(([key, value]) => `${key.replace(/-/g, " ")}: ${value}`)
             .reduce((acc, value) => acc + "\n" + value)}
         
         `;
@@ -27,17 +58,24 @@
     <label for="name"> What is your name? </label>
     <input name="name" type="text" required />
     <label for="type">Which tour would you like to book?</label>
-    <select name="type" required>
-        <option disabled selected>Pick a tour...</option>
-        <option value="best of">Best of The Hague Tour</option>
+    <select bind:value={rawSelectedTour} name="type" required>
+        <option value=""disabled selected>Pick a tour...</option>
+        <option value="best">Best of The Hague Tour</option>
         <option value="food">Best of Food Tour</option>
         <option value="newcomers">Newcomers Tour</option>
         <option value="politics">Politics of The Hague Tour</option>
         <option value="laak">Secrets of Laakkwartier Tour</option>
-        <option value="royal family">Dutch Royal Family Tour</option>
-        <option value="beer and siprits">Beer and Spirits Tasting Tour</option>
+        <option value="royal">Dutch Royal Family Tour</option>
+        <option value="drink">Beer and Spirits Tasting Tour</option>
         <option value="bespoke">Bespoke tour</option>
     </select>
+
+    {#if rawSelectedTour == "bespoke"}
+        <label for="what-to-include">
+            What would you like to have included in your tour?
+        </label>
+        <textarea name="what-to-include" required></textarea>
+    {/if}
 
     <label for="when">
         When would you like to have this tour?
@@ -52,8 +90,12 @@
     <input name="age-range" type="text" required />
     <label for="dietary"> Any food allergies or preferences? </label>
     <input name="dietary" type="text" required />
-    <label for="anything-else"> Anything else you'd like to mention? </label>
-    <textarea name="anything-else"></textarea>
+    {#if !(preselection == "Bespoke tour")}
+        <label for="anything-else">
+            Anything else you'd like to mention?
+        </label>
+        <textarea name="anything-else"></textarea>
+    {/if}
     <button>Submit</button>
 </form>
 

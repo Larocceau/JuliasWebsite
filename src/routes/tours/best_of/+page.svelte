@@ -6,6 +6,7 @@
 </script>
 
 <Tourpage
+    preselection="Best of The Hague Tour"
     pretitle="Private Walking Tour"
     title="Best of The Hague"
     price="€300 flat per hour + €10 per person"

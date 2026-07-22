@@ -2,6 +2,7 @@
     import Bookingdetails from "$lib/components/bookingdetails.svelte";
     import Contentblock from "$lib/components/contentblock.svelte";
     import Polaroidlink from "$lib/components/polaroidlink.svelte";
+    import type { Tour } from "$lib/domain";
     import type { Picture } from "@sveltejs/enhanced-img";
     import type { Snippet } from "svelte";
 
@@ -18,12 +19,14 @@
         pretitle,
         price,
         images,
+        preselection
     }: {
         children: Snippet;
         pretitle?: string;
         title: string;
         price?: string;
         images: SidebarImage[];
+        preselection?: Tour
     } = $props();
 </script>
 
@@ -65,17 +68,15 @@
     </div>
     <div class="picture-bar">
         {#each images.map( (image, index) => ({ ...image, index: index }), ) as image}
-            <div>
                 <Polaroidlink
                     src={image.picture}
                     title={image.description}
                     rotation={rotations[image.index]}
                 ></Polaroidlink>
-            </div>
         {/each}
     </div>
 </div>
-<Bookingdetails callForAction="Book this tour now"></Bookingdetails>
+<Bookingdetails {preselection} callForAction="Book this tour now"></Bookingdetails>
 
 <style>
     .content-and-shizzle {

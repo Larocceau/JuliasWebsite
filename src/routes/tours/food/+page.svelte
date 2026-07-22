@@ -6,6 +6,7 @@
 </script>
 
 <Tourpage
+    preselection="Best of Food Tour"
     pretitle="Private Walking and  Public Transport Tour"
     title="Food of The Hague"
     price="€300 flat per hour + 50€ per person"

@@ -6,6 +6,7 @@
 </script>
 
 <Tourpage
+    preselection="Dutch Royal Family Tour"
     pretitle="Private Walking Tour"
     title="Dutch Royal Family"
     price="€300 flat per hour + €10 per person"

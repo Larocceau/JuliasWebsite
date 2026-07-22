@@ -6,6 +6,7 @@
 </script>
 
 <Tourpage
+    preselection="Beer and Spirits Tasting Tour"
     pretitle="Private Walking and  Public Transport Tour"
     title="Beers and Spirits"
     price="€300 flat per hour + 65€ per person"
