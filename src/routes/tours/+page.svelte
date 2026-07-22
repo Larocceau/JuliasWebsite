@@ -6,6 +6,13 @@
     import picture3 from "$lib/assets/polaroids/best_of/best of The Hague 3.png?enhanced";
 </script>
 
+<svelte:head
+    ><meta
+        name="description"
+        content="Make the most of your time in The Hague and choose your own adventure with the only tour company specialized in private tours"
+    />
+</svelte:head>
+
 <Tourpage
     title="Discover Our Tours"
     images={[
@@ -22,6 +29,7 @@
             description: "Dunne Bierkade",
         },
     ]}
+    iMadeAStupidException={true}
 >
     <p>At Shepherd Tours, we offer private tours to individuals and groups.</p>
     <p>What can you expect on your tour?</p>

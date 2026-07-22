@@ -20,6 +20,7 @@
         price,
         images,
         preselection,
+        iMadeAStupidException,
     }: {
         children: Snippet;
         pretitle?: string;
@@ -27,11 +28,12 @@
         price?: string;
         images: SidebarImage[];
         preselection?: Tour;
+        iMadeAStupidException?: boolean;
     } = $props();
 </script>
 
 <svelte:head>
-    <title>{title} Tour</title>
+    <title>{title + (iMadeAStupidException ? "" : " Tour")}</title>
 </svelte:head>
 
 <div class="title">
