@@ -16,7 +16,7 @@
             ],
         ],
         ["/bespoke", "Bespoke Tours"],
-        ["/about", "About"]
+        ["/about", "About"],
     ];
 
     let highlighted = $derived((path: string) => {
@@ -30,7 +30,7 @@
 <nav>
     {#each pages as whateverPage}
         <div class={highlighted(whateverPage[0]) ? "marker item" : "item"}>
-            <a href={whateverPage[0]}>{whateverPage[1]} </a>
+            <a href={whateverPage[0]} data-sveltekit-noscroll>{whateverPage[1]}  </a>
 
             {#if whateverPage[2]}
                 <div class="subnav-hitbox">
@@ -41,7 +41,7 @@
                                     ? "marker"
                                     : ""}
                             >
-                                <a href={subpage[0]}>{subpage[1]} </a>
+                                <a href={subpage[0]} data-sveltekit-noscroll>{subpage[1]}</a>
                             </div>
                         {/each}
                     </div>
@@ -79,6 +79,7 @@
         left: 50%;
         transform: translateX(-50%);
         height: fit-content;
+        z-index: 10;
     }
 
     .subnav {
@@ -119,5 +120,16 @@
     .marker {
         background-color: var(--color-detail);
         border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+        nav {
+            flex-direction: column;
+            width: 85%;
+        }
+        nav > div,
+        .subnav > div {
+            width: auto;
+        }
     }
 </style>
