@@ -5,7 +5,6 @@
     import localDelicaties from "$lib/assets/polaroids/food/food tour 2.png?enhanced";
     import market from "$lib/assets/polaroids/best_of/both_3.png?enhanced";
     import hiddenGems from "$lib/assets/polaroids/contact us.jpg?enhanced";
-    import type { PageProps } from "./$types";
     import Contentblock from "$lib/components/contentblock.svelte";
 
 </script>
