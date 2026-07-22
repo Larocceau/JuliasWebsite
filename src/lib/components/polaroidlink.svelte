@@ -17,10 +17,10 @@
 <div class="wrapper" style="rotate:{rotation}deg">
     {#if href}
         <a {href}>
-                <enhanced:img {src} alt="" class="image"/>
-                <div class="handle">
-                    <p>{title}</p>
-                </div>
+            <enhanced:img {src} alt="" class="image" />
+            <div class="handle">
+                <p>{title}</p>
+            </div>
         </a>
     {:else}
         <enhanced:img {src} alt="" class="image" />
@@ -46,16 +46,21 @@
         width: 100%;
         text-align: center;
         text-justify: distribute;
-        height: 20%;
+        height: 18%;
         bottom: 0px;
         justify-content: center;
         align-items: center;
         display: flex;
+        overflow: hidden;
     }
 
     p {
         margin: 0%;
         font-family: "Playfair Display Variable", serif;
         font-style: italic;
+        text-overflow: ellipsis;
+        max-height: 100%;
+        white-space: nowrap;
+        overflow: hidden;
     }
 </style>
