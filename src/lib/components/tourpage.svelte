@@ -19,16 +19,20 @@
         pretitle,
         price,
         images,
-        preselection
+        preselection,
     }: {
         children: Snippet;
         pretitle?: string;
         title: string;
         price?: string;
         images: SidebarImage[];
-        preselection?: Tour
+        preselection?: Tour;
     } = $props();
 </script>
+
+<svelte:head>
+    <title>{title} Tour</title>
+</svelte:head>
 
 <div class="title">
     {#if pretitle}
@@ -68,15 +72,16 @@
     </div>
     <div class="picture-bar">
         {#each images.map( (image, index) => ({ ...image, index: index }), ) as image}
-                <Polaroidlink
-                    src={image.picture}
-                    title={image.description}
-                    rotation={rotations[image.index]}
-                ></Polaroidlink>
+            <Polaroidlink
+                src={image.picture}
+                title={image.description}
+                rotation={rotations[image.index]}
+            ></Polaroidlink>
         {/each}
     </div>
 </div>
-<Bookingdetails {preselection} callForAction="Book this tour now"></Bookingdetails>
+<Bookingdetails {preselection} callForAction="Book this tour now"
+></Bookingdetails>
 
 <style>
     .content-and-shizzle {
