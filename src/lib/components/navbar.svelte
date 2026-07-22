@@ -15,7 +15,8 @@
                 ["/tours/laak", "Laakkwartier Tour"],
             ],
         ],
-        ["/bespoke", "Bespoke Tours"]
+        ["/bespoke", "Bespoke Tours"],
+        ["/about", "About"]
     ];
 
     let highlighted = $derived((path: string) => {
