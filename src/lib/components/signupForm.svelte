@@ -17,7 +17,7 @@
 
     let tourToKey = invertRecord(keyToTour);
 
-    let rawSelectedTour = $state<string >("");
+    let rawSelectedTour = $state<string>("");
 
     $effect(() => {
         if (preselection) {
@@ -59,7 +59,7 @@
     <input name="name" type="text" required />
     <label for="type">Which tour would you like to book?</label>
     <select bind:value={rawSelectedTour} name="type" required>
-        <option value=""disabled selected>Pick a tour...</option>
+        <option value="" disabled selected>Pick a tour...</option>
         <option value="best">Best of The Hague Tour</option>
         <option value="food">Best of Food Tour</option>
         <option value="newcomers">Newcomers Tour</option>
@@ -90,12 +90,8 @@
     <input name="age-range" type="text" required />
     <label for="dietary"> Any food allergies or preferences? </label>
     <input name="dietary" type="text" required />
-    {#if !(preselection == "Bespoke tour")}
-        <label for="anything-else">
-            Anything else you'd like to mention?
-        </label>
-        <textarea name="anything-else"></textarea>
-    {/if}
+    <label for="anything-else"> Anything else you'd like to mention? </label>
+    <textarea name="anything-else"></textarea>
     <button>Submit</button>
 </form>
 

@@ -21,6 +21,7 @@
         images,
         preselection,
         iMadeAStupidException,
+        callForAction = "Book this tour now"
     }: {
         children: Snippet;
         pretitle?: string;
@@ -29,6 +30,7 @@
         images: SidebarImage[];
         preselection?: Tour;
         iMadeAStupidException?: boolean;
+        callForAction?: string,
     } = $props();
 </script>
 
@@ -82,7 +84,7 @@
         {/each}
     </div>
 </div>
-<Bookingdetails {preselection} callForAction="Book this tour now"
+<Bookingdetails {preselection} {callForAction}
 ></Bookingdetails>
 
 <style>

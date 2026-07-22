@@ -1,13 +1,17 @@
 <script lang="ts">
     import Polaroidlink from "$lib/components/polaroidlink.svelte";
-    import SignupForm from "$lib/components/signupForm.svelte";
-
-    import localDelicaties from "$lib/assets/polaroids/food/food tour 2.png?enhanced";
-    import market from "$lib/assets/polaroids/best_of/both_3.png?enhanced";
     import hiddenGems from "$lib/assets/polaroids/contact us.jpg?enhanced";
     import Contentblock from "$lib/components/contentblock.svelte";
     import Widget from "$lib/components/widget.svelte";
 </script>
+
+<svelte:head
+    ><meta
+        name="description"
+        content="Private tours for individuals, families, groups, companies, schools, universities, and more. Experienced in giving tours since 2017 in The Netherlands, London England, and now The Hague. "
+    />
+    <title>About Shepherd's tours</title>
+</svelte:head>
 
 <div class="content-and-shizzle">
     <div class="main-content">
@@ -17,11 +21,6 @@
                 I love The Hague. I want to be the person who helps you, your
                 employees, guests, and families find their footing in this new
                 city.
-            </p>
-            <p>
-                I’ve led tours for individuals, families, groups, companies,
-                schools, universities, and cruise groups in both London and The
-                Hague. I’m excited for the opportunity to work with you next!
             </p>
             <p>
                 I’ve been giving tours in an official capacity since 2017. My
@@ -43,6 +42,11 @@
                 guide. Once I got the job, I left the world of office work,
                 walked into tour guiding, and never went back.
             </p>
+            <p>
+                I’ve led tours for individuals, families, groups, companies,
+                schools, universities, and cruise groups in both London and The
+                Hague. I’m excited for the opportunity to work with you next!
+            </p>
         </Contentblock>
         <Contentblock title="Sustainability">
             <p>
@@ -55,16 +59,16 @@
                 feet!
             </p>
             <p>
+                I find it important to talk about the good and the bad about an
+                area on a tour - it’s important to give a full overview of the
+                topics at hand.
+            </p>
+            <p>
                 I also find it important to showcase the best of the independent
                 section of the city. All the groups we work with and showcase on
                 my tours are independent shop owners or business owners, often
                 immigrants, who prioritise the best of the best for their
                 clients.
-            </p>
-            <p>
-                I find it important to talk about the good and the bad about an
-                area on a tour - it’s important to give a full overview of the
-                topics at hand.
             </p>
             <p>
                 Finally, every time a tour is booked, a tree is planted through
@@ -79,7 +83,7 @@
         <Widget>
             <p>Some fun facts about me:</p>
             <p>
-                I love fries with mayo, and do not have the same fondness for
+                I love fries with mayo, but do not have the same fondness for
                 herring!
             </p>
             <p>
@@ -92,6 +96,20 @@
             </p>
         </Widget>
     </div>
+</div>
+<div class="trusted">
+    <Widget>
+        <h2 style="text-transform: capitalize;">Our guides are known by:</h2>
+        <a href="https://totallytailored.com">Totally Tailored</a> |
+        <a href="https://www.enterthehague.com/">Enter The Hague</a> |
+        <a href="https://www.dagjedenhaag.nl/en/">Ga Den Haag</a> |
+        <a href="https://www.vikingcruises.com">Viking Cruises</a> |
+        <a href="https://www.atlasworkshops.com">Atlas Workshops</a> |
+        <a href="https://thenewfarm.com">The New Farm</a> |
+        <a href="https://www.thetouristthehague.com">The Tourist The Hague</a> |
+        <a href="https://groups-move-and-study.com">Move And Study</a> |
+        <a href="https://www.getyourguide.com">Get Your Guide</a>
+    </Widget>
 </div>
 
 <style>
@@ -113,6 +131,10 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+    }
+
+    .trusted a {
+        text-transform: uppercase;
     }
 
     @media (max-width: 600px) {

@@ -5,6 +5,13 @@
     import picture3 from "$lib/assets/polaroids/food/food tour 3.png?enhanced";
 </script>
 
+<svelte:head
+    ><meta
+        name="description"
+        content="Discover the best food the city has to offer with a private guide on our Food Tasting Tour in The Hague.The only tour guide company in The Hague specialised in private food tours."
+    />
+</svelte:head>
+
 <Tourpage
     preselection="Best of Food Tour"
     pretitle="Private Walking and  Public Transport Tour"

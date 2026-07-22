@@ -15,6 +15,7 @@
 
 <Tourpage
     title="Discover Our Tours"
+    callForAction="Book your tour now"
     images={[
         {
             picture: picture1,
@@ -41,15 +42,11 @@
         <li>Maximum 10 people per guide.</li>
         <li>
             Knowledgeable private local guide with an international background
-            who speaks both Dutch and English.
+            who speaks both English and Dutch.
         </li>
         <li>
             Pick up and drop off from location on foot or by public transport.
         </li>
         <li>Follow up thank you email with a picture for memories!</li>
     </ul>
-    <p>
-        More information on bespoke tours coming soon. Feel free to reach out
-        about booking one.
-    </p>
 </Tourpage>

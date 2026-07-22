@@ -5,7 +5,15 @@
     import picture3 from "$lib/assets/polaroids/newcomers/nt_3.png?enhanced";
 </script>
 
+<svelte:head
+    ><meta
+        name="description"
+        content="The only tour guides in The Hague specialised in private tours for newly relocated employees and families. Discover your new home with a private guide with our Newcomers Tour."
+    />
+</svelte:head>
+
 <Tourpage
+    iMadeAStupidException={true}
     preselection="Newcomers Tour"
     pretitle="Private Walking Tour"
     title="Newcomers Tour"

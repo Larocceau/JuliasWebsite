@@ -6,8 +6,15 @@
     import market from "$lib/assets/polaroids/best_of/both_3.png?enhanced";
     import hiddenGems from "$lib/assets/polaroids/contact us.jpg?enhanced";
     import Contentblock from "$lib/components/contentblock.svelte";
-
 </script>
+
+<svelte:head
+    ><meta
+        name="description"
+        content="Choose your own adventure with a bespoke tour. All our guides are locals who are bi-lingual. The only tour guide in The Hague specialised in private, bespoke tours."
+    />
+    <title>Bespoke Tours</title>
+</svelte:head>
 
 <Contentblock>
     <p>

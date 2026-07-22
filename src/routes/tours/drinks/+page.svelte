@@ -5,6 +5,12 @@
     import picture3 from "$lib/assets/polaroids/drinks/drink tour 3.png?enhanced";
 </script>
 
+<svelte:head
+    ><meta
+        name="description"
+        content="Discover the best drinks the city has to offer on the Beer and Spirits of The Hague Tasting Tour! The only tour company in The Hague specialised in private food and drink tours. "
+    />
+</svelte:head>
 <Tourpage
     preselection="Beer and Spirits Tasting Tour"
     pretitle="Private Walking and  Public Transport Tour"
@@ -28,8 +34,9 @@
     <p>
         The cost for a 3 hour tour is <b
             >€300 per tour, + €60 per person aged 18+
-        </b> and <b>€30 for persons under 18.</b> This includes food and drink at
-        the scheduled locations.
+        </b>
+        and <b>€30 for persons under 18.</b> This includes food and drink at the
+        scheduled locations.
     </p>
     <p>
         This tour can be booked to start anytime between 13-16h, ending between

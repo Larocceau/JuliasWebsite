@@ -8,8 +8,6 @@
 
 </script>
 
-<svelte:head>
-</svelte:head>
 
 <header>
 	<div class="header-content">

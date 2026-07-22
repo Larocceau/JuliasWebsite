@@ -5,6 +5,13 @@
     import picture3 from "$lib/assets/polaroids/best_of/both_3.png?enhanced";
 </script>
 
+<svelte:head
+    ><meta
+        name="description"
+        content="The only tour guiding company in The Hague specialised in private tours. Discover the city with the Highlights of The Hague Tour/Best of The Hague Tour."
+    />
+</svelte:head>
+
 <Tourpage
     preselection="Best of The Hague Tour"
     pretitle="Private Walking Tour"

@@ -5,6 +5,13 @@
     import picture3 from "$lib/assets/polaroids/laak/photo_3.png?enhanced";
 </script>
 
+<svelte:head
+    ><meta
+        name="description"
+        content="The only tour guide company in The Hague offering tours in Laakkwartier. Discover the neighbourhood with a private guide on our Laakkwartier Tour."
+    />
+</svelte:head>
+
 <Tourpage
     preselection="Secrets of Laakkwartier Tour"
     pretitle="Private Walking Tour"

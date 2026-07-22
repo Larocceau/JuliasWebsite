@@ -5,6 +5,13 @@
     import picture3 from "$lib/assets/polaroids/politics/politics_3.png?enhanced";
 </script>
 
+<svelte:head
+    ><meta
+        name="description"
+        content="Discover the political past and present in the City of Peace and Justice on our politics tour. The only tour guide company in The Hague specialised in private tours."
+    />
+</svelte:head>
+
 <Tourpage
     preselection="Politics of The Hague Tour"
     pretitle="Private Walking Tour"

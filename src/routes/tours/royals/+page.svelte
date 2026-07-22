@@ -5,6 +5,13 @@
     import picture3 from "$lib/assets/polaroids/royals/photo_3.png?enhanced";
 </script>
 
+<svelte:head
+    ><meta
+        name="description"
+        content="Discover the stories of the Dutch royal family in their past and present on the Dutch Royal Family Tour. The only tour guide company in The Hague specialised in private tours."
+    />
+</svelte:head>
+
 <Tourpage
     preselection="Dutch Royal Family Tour"
     pretitle="Private Walking Tour"
