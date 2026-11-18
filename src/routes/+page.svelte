@@ -18,7 +18,7 @@
         name="description"
         content="Discover The Hague with Shepherd's tailor-made tours. From food & drink walks to royal‑family and bespoke experiences"
     />
-    <title>Shepherd's tours</title>
+    <title>Shepherd Tours</title>
 </svelte:head>
 
 <div class="polalinks">

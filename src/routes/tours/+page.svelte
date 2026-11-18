@@ -2,8 +2,8 @@
     import Tourpage from "$lib/components/tourpage.svelte";
     import picture1 from "$lib/assets/polaroids/best_of/best of The Hague 1.png?enhanced";
     import picture2 from "$lib/assets/polaroids/best_of/best of the hague 2.png?enhanced";
-
     import picture3 from "$lib/assets/polaroids/best_of/best of The Hague 3.png?enhanced";
+
 </script>
 
 <svelte:head
