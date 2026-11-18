@@ -48,7 +48,7 @@
 
     let form = $state<HTMLFormElement>();
 
-    let content = $state<String>();
+    let email_content = $state<String>();
 
     let refreshContent = () => {
         if (!form) {
@@ -58,8 +58,7 @@
 
         const tour = rawSelectedTour && keyToTour[rawSelectedTour];
 
-        content = `
-Dear Shepherd Tours team,
+        email_content = `Dear Shepherd Tours Team,
 
 I'm interested in booking a ${tour}. Here are the details:
 
@@ -82,7 +81,7 @@ ${data
         refreshContent();
 
         const url = encodeURI(
-            `mailto:book@shepherdtours.nl?subject=New Tour Request&body=${content}`,
+            `mailto:book@shepherdtours.nl?subject=New Tour Request&body=${email_content}`,
         );
 
         window.open(url, "_self");
@@ -95,7 +94,7 @@ ${data
     <!-- svelte-ignore a11y_no_static_element_interactions -->
     {#if dialogOpen}<div class="overlay" onclick={closeDialog}>
             <div class="dialog" onclick={(e) => e.stopPropagation()}>
-                <Contentblock title="thank you for your interest!">
+                <Contentblock title="Thank you for your interest!">
                     <p>
                         An email has been opened, ready to send to finish your
                         booking!
@@ -106,7 +105,7 @@ ${data
                             >book@shepherdtours.nl</a
                         >
                     </p>
-                    <textarea class="sample_email" readonly>{content}</textarea>
+                    <textarea class="sample_email" readonly>{email_content}</textarea>
                     <button onclick={closeDialog}>Close</button>
                 </Contentblock>
             </div>
